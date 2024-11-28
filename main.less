@@ -1,0 +1,216 @@
+@primary-color: #1e1e2e; // Темный фон для космоса
+@accent-color: #ff9800; // Акцентный цвет
+@font-size: 16px;
+
+body {
+    font-size: @font-size;
+    background-color: @primary-color;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #000;
+    color: @accent-color;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .header__nav {
+        .nav__list {
+            display: flex;
+            gap: 20px;
+
+            .nav__item a {
+                color: #ffffff;
+                text-decoration: none;
+                &:hover {
+                    color: @accent-color;
+                }
+            }
+        }
+    }
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background: url('space_bg.jpg') no-repeat center center/cover;
+
+    .intro__text {
+        max-width: 50%;
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background-color: @accent-color;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: darken(@accent-color, 10%);
+            }
+        }
+    }
+
+    .intro__form {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 5px;
+        h2 {
+            color: @accent-color;
+            margin-bottom: 10px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+        }
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.social-media {
+    text-align: center;
+    padding: 20px;
+    background-color: @primary-color;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.tabs {
+    padding: 30px;
+    background-color: #333;
+
+    h2 {
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    .tabs__menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        button {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: @accent-color;
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+        padding: 20px;
+        background-color: #444;
+        border-radius: 5px;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+}
+
+.content-section {
+    display: flex;
+    padding: 30px;
+    background-color: @primary-color;
+    gap: 20px;
+
+    .content-image {
+        flex: 1;
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .content-text {
+        flex: 2;
+
+        h3 {
+            font-size: 24px;
+            color: @accent-color;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro__text, .intro__form {
+        max-width: 100%;
+    }
+
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tabs__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs__menu button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЦИФРОВАЯ ЭКОСИСТЕМА КОСМОС</title>
+    <!-- Подключаем LESS -->
+    <link rel="stylesheet/less" type="text/css" href="main.less">
+    <!-- Подключаем LESS.js для автоматической компиляции локально -->
+    <script src="less.min.js"></script>
+</head>
+    <header class="header">
+        <div class="header__logo">ЦИФРОВАЯ ЭКОСИСТЕМА КОСМОС</div>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">Особенности</a></li>
+                <li class="nav__item"><a href="#">О проекте</a></li>
+                <li class="nav__item"><a href="#">Цены</a></li>
+                <li class="nav__item"><a href="#">Отзывы</a></li>
+                <li class="nav__item"><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Секция с заголовком и кнопкой -->
+    <section class="intro">
+        <div class="intro__text">
+            <h1>Покорение Космоса и Цифровые Экосистемы</h1>
+            <p>Юрий Гагарин, первый человек в космосе, стал символом научного прорыва и инноваций, которые сегодня находят отражение в цифровых экосистемах.</p>
+            <p>Цифровые экосистемы представляют собой интеграцию технологий, данных и сетей, которые работают вместе, чтобы улучшить жизнь людей и обеспечить устойчивое развитие. Проект "ЦИФРОВАЯ ЭКОСИСТЕМА КОСМОС" направлен на внедрение инновационных решений для изучения и защиты окружающей среды.</p>
+            <button class="btn" onclick="showMore()">Подробнее</button>
+            <p id="more-info" style="display: none;">Проект "ЦИФРОВАЯ ЭКОСИСТЕМА КОСМОС" — это платформа, интегрирующая различные аспекты экологического мониторинга и анализа данных, чтобы создать устойчивую и безопасную среду для будущих поколений.</p>
+        </div>
+        <div class="intro__form">
+            <h2>Попробуйте бесплатно</h2>
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Пароль">
+                <button class="btn">Начать</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Секция социальных сетей -->
+    <section class="social-media">
+        <h2>Мы в социальных сетях</h2> <!-- Добавленный заголовок -->
+        <div class="social-icons">
+            <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="telegram-svgrepo-com.svg" alt="Telegram"></a>
+            <a href="#"><img src="vk-svgrepo-com.svg" alt="VK"></a>
+        </div>
+    </section>
+
+    <!-- Секция с табами -->
+    <section class="tabs">
+        <h2>Информация</h2> <!-- Добавленный заголовок -->
+        <div class="tabs__menu">
+            <button onclick="showTabContent('tab-1')">История</button>
+            <button onclick="showTabContent('tab-2')">Экосистема</button>
+            <button onclick="showTabContent('tab-3')">Будущее</button>
+        </div>
+        <div class="tabs__content">
+            <div id="tab-1" class="tab-content active">
+                <p>Юрий Гагарин стал первым человеком в космосе, открыв человечеству новые горизонты и символизируя достижения науки и технологий.</p>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <p>Сегодня цифровые экосистемы помогают интегрировать различные аспекты жизни и способствуют решению глобальных экологических проблем.</p>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <p>Наш проект направлен на разработку цифровых инструментов для анализа и мониторинга экологической обстановки, создавая устойчивую цифровую среду.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок контента -->
+    <section class="content-section">
+        <div class="content-image">
+            <img src="space1.jpg" alt="Космос">
+        </div>
+        <div class="content-text">
+            <h3>Инновации для устойчивого будущего</h3>
+            <p>Цифровая экосистема космоса помогает не только исследовать глубины Вселенной, но и решать экологические задачи на Земле. Благодаря интеграции данных и искусственного интеллекта, наш проект предоставляет точные и оперативные решения для защиты окружающей среды.</p>
+            <p>Примером такого подхода может служить использование спутников для мониторинга состояния атмосферы и океанов, а также внедрение искусственного интеллекта для анализа больших объемов данных.</p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>&copy; 2024 ЦИФРОВАЯ ЭКОСИСТЕМА КОСМОС. Все права защищены. Инновации для устойчивого развития.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+  font-size: 16px;
+  background-color: #1e1e2e;
+  color: #ffffff;
+  line-height: 1.6;
+}
+.header {
+  background-color: #000;
+  color: #ff9800;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header .header__nav .nav__list {
+  display: flex;
+  gap: 20px;
+}
+.header .header__nav .nav__list .nav__item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header .header__nav .nav__list .nav__item a:hover {
+  color: #ff9800;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background: url('space_bg.jpg') no-repeat center center / cover;
+}
+.intro .intro__text {
+  max-width: 50%;
+}
+.intro .intro__text h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+.intro .intro__text p {
+  font-size: 18px;
+}
+.intro .intro__text .btn {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.intro .intro__text .btn:hover {
+  background-color: #cc7a00;
+}
+.intro .intro__form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+.intro .intro__form h2 {
+  color: #ff9800;
+}
+.intro .intro__form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.intro .intro__form .btn {
+  width: 100%;
+}
+.social-media {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e2e;
+}
+.social-media .social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+}
+.tabs {
+  display: flex;
+  padding: 30px;
+  background-color: #333;
+}
+.tabs .tabs__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tabs .tabs__menu button {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.tabs .tabs__menu button:hover {
+  background-color: #ff9800;
+}
+.tabs .tab-content {
+  display: none;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #444;
+  border-radius: 5px;
+}
+.tabs .tab-content.active {
+  display: block;
+}
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .header__nav .nav__list {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .intro__text,
+  .intro__form {
+    max-width: 100%;
+  }
+}
